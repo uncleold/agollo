@@ -35,7 +35,7 @@ func WatchUpdate() <-chan *ChangeEvent {
 	return defaultClient.WatchUpdate()
 }
 
-// GetStringValueWithNameSapce get value from given namespace
+// GetStringValueWithNameSpace get value from given namespace
 func GetStringValueWithNameSpace(namespace, key, defaultValue string) string {
 	return defaultClient.GetStringValueWithNameSpace(namespace, key, defaultValue)
 }
@@ -48,4 +48,9 @@ func GetStringValue(key, defaultValue string) string {
 // GetNameSpaceContent get contents of namespace
 func GetNameSpaceContent(namespace, defaultValue string) string {
 	return defaultClient.GetNameSpaceContent(namespace, defaultValue)
+}
+
+// GetAllKeys return all config keys in given namespace
+func GetAllKeys(namespace string) []string {
+	return defaultClient.GetAllKeys(namespace)
 }
